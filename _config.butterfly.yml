@@ -54,7 +54,7 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: /images/favicon.png
 
 avatar:
   img: /images/avatar.png
