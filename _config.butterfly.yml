@@ -293,7 +293,7 @@ aside:
       link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: 欢迎来到我的博客！
+    content: 欢迎来到我的博客！大家如果有什么疑问可以联系我的QQ(3615825554)感谢大家的支持。
   card_recent_post:
     enable: true
     # If set 0 will show all
