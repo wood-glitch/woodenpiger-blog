@@ -632,8 +632,8 @@ twikoo:
 # https://giscus.app/
 giscus:
   repo: wood-glitch/woodenpiger-blog
-  repo_id: R_kgDOSBWqyg
-  category_id: DIC_kwDOSBWqys4C648n
+  repo_id: R_kgDOSBWayg
+  category_id: DIC_kwDOSBWays4C648n
   light_theme: light
   dark_theme: dark
   js: https://giscus.app/client.js
