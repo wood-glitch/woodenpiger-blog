@@ -1,3 +1,12 @@
+---
+title: 学习ai分享
+date: 2026-10-18
+tags:
+  - 魔法上网
+  - 教程搭建
+categories:
+  - 实用工具的分享
+---
 # Lightsail Ubuntu 22.04 搭建 Xray（VLESS + REALITY）并导入 V2RayN
 
 这份手册按从服务器准备到客户端验证的顺序编写，适用于 Amazon Lightsail、Ubuntu 22.04、Termius（Windows）和 V2RayN。示例公网 IP 为 `52.64.30.75`；如果你的实例 IP 不同，PowerShell 测试时替换成实际 IP。
