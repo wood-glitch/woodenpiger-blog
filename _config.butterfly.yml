@@ -1068,7 +1068,7 @@ inject:
   head:
     - <link rel="stylesheet" href="/css/donate.css">
   bottom:
-    # - <script src="xxxx"></script>
+    - <script defer src="/js/counter.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
