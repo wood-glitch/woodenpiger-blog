@@ -1,5 +1,3 @@
-276 source/_posts/hexo-blog-auto-publish.md
-=== article full text (for rewrite reference) ===
 ---
 title: 我的博客是怎么跑起来的：Hexo + Cloudflare Pages + Muse 自动发布全流程
 date: 2026-11-15 17:45:00
