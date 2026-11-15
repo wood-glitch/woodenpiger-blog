@@ -441,7 +441,6 @@ inject:
     - '<style>.article-content p>img:only-child{max-width:680px !important;display:block;margin-left:auto;margin-right:auto}</style>'
     - '<style>@media (min-width:769px){.home-article-thumbnail{aspect-ratio:21/9 !important}}</style>'
     - '<style>@media (max-width:768px){.home-banner-container{height:55vh !important}.home-banner-background{height:55vh !important}}</style>'
-    - '<style>@media (max-width:768px){.home-banner-container .content{transform:translateY(7vh) !important}}</style>'
     -
   # Inject custom footer html code
   footer:
