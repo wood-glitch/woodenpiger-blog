@@ -440,7 +440,7 @@ inject:
     - '<style>.ai-declaration{border:1px solid rgba(34,211,238,.75);background:rgba(34,211,238,.08);box-shadow:0 0 16px rgba(34,211,238,.45),inset 0 0 12px rgba(34,211,238,.14);border-radius:10px;padding:14px 18px;color:#cffafe}.ai-declaration strong{color:#ecfeff}</style>'
     - '<style>.article-content p>img:only-child{max-width:680px !important;display:block;margin-left:auto;margin-right:auto}</style>'
     - '<style>@media (min-width:769px){.home-article-thumbnail{aspect-ratio:21/9 !important}}</style>'
-    - '<style>@media (max-width:768px){div.home-banner-container{height:44vh !important}div.home-banner-background{height:44vh !important}div.home-banner-container .content{padding-bottom:40px !important}div.home-banner-container .description{transform:translateY(100px) !important}}</style>'
+    - '<style>@media (max-width:768px){div.home-banner-container{height:44vh !important}div.home-banner-background{height:44vh !important}div.home-banner-container .content{padding-bottom:40px !important}div.home-banner-container .description{transform:translateY(100px) !important}div.home-banner-container .content>div.absolute{transform:translateY(100px) !important}}</style>'
     -
   # Inject custom footer html code
   footer:
