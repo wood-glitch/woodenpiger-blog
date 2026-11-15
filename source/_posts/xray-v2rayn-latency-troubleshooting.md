@@ -1,6 +1,6 @@
 ---
 title: Xray + v2rayN 延迟显示 -1 的排查记录
-date: 2026-10-18
+date: 2026-10-18 10:00:00
 
 cover: /images/covers/xray-v2rayn.svg
 description: AWS Lightsail 上 Xray VLESS + REALITY 部署后，v2rayN 真连接延迟显示 -1 的完整排查过程：先从服务状态、端口监听、云防火墙与 UFW 逐层定位，再核对 REALITY 参数。

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://owo24.com/sitemap.xml

@@ -12,7 +12,8 @@ const REDIRECTS = [
   { from: "/2026/05/09/cf/", to: "/2026/05/09/cf-2-private-server-setup/" },
   { from: "/2026/09/03/ai答题/", to: "/2026/09/03/ai-quiz-assistant/" },
   { from: "/2026/10/25/hexo-CLIProxyAPI服务器部署与Codex接入实践/", to: "/2026/10/25/ubuntu-cliproxyapi-codex-gateway/" },
-  { from: "/2026/11/01/opencode-go-套餐实测/", to: "/2026/11/01/opencode-go-review/" }
+  { from: "/2026/11/01/opencode-go-套餐实测/", to: "/2026/11/01/opencode-go-review/" },
+  { from: "/2026/10/17/xray-v2rayn-latency-troubleshooting/", to: "/2026/10/18/xray-v2rayn-latency-troubleshooting/" }
 ];
 
 function redirectPage(to) {
