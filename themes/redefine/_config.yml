@@ -434,10 +434,10 @@ footer:
 # Docs: https://redefine-docs.ohevan.com/inject
 inject:
   # Whether to enable inject
-  enable: false
+  enable: true
   # Inject custom head html code
   head: 
-    -
+    - '<style>.ai-declaration{border:1px solid rgba(34,211,238,.75);background:rgba(34,211,238,.08);box-shadow:0 0 16px rgba(34,211,238,.45),inset 0 0 12px rgba(34,211,238,.14);border-radius:10px;padding:14px 18px;color:#cffafe}.ai-declaration strong{color:#ecfeff}</style>'
     -
   # Inject custom footer html code
   footer:
