@@ -1,0 +1,35 @@
+<% const postList = createNewArchivePosts(posts) %>
+<div class="archive-list-container">
+    <% postList.forEach(postYear => { %>
+        <section class="archive-item mb-spacing-unit last:mb-0">
+            <div class="archive-item-header flex flex-row items-center mb-2">
+                <span class="archive-year font-semibold text-3xl mr-2"><%= postYear.year %></span>
+                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color"><%= postYear.postList.length %></span>
+            </div>
+            <% let previousDate = null; %>
+            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
+                <% postYear.postList.sort((a,b) => (a.date > b.date ? -1 : (a.date < b.date ? 1 : a.title.localeCompare(b.title)))).forEach(post => { %>
+                    <% const currentDate = date(post.date, 'MM-DD'); %>
+                    <% if (previousDate !== currentDate) { %>
+                        <% if (previousDate) { %>
+                            </li>
+                        <% } %>
+                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='<%= currentDate %>'>
+                    <% } %>
+                    <div class="archive-post-row flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                        <a href="<%- url_for(post.path) %>" class="block w-fit">
+                            <span class="article-title my-0.5 text-2xl"><%= post.title %></span>
+                        </a>
+                        <% if (theme.global.website_counter && theme.global.website_counter.enable && theme.global.website_counter.post_pv) { %>
+                            <span class="archive-post-pv text-xs text-third-text-color shrink-0" data-post-pv-container data-post-path="<%- url_for(post.path) %>">
+                                <i class="fa-regular fa-eye" aria-hidden="true"></i>&nbsp;<span class="pv-label">阅读量</span>&nbsp;<span class="post-pv-value" data-post-pv="<%- url_for(post.path) %>">—</span>
+                            </span>
+                        <% } %>
+                    </div>
+                    <% previousDate = currentDate; %>
+                <% }) %>
+                </li>
+            </ul>
+        </section>
+    <% }) %>
+</div>

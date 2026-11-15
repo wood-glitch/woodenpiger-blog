@@ -1,0 +1,6 @@
+/* Compatibility entry.
+ * Active styles are injected as tokens.css + theme-overrides.css.
+ * This file is kept so older references to /css/custom.css still work.
+ */
+@import url("./tokens.css");
+@import url("./theme-overrides.css");

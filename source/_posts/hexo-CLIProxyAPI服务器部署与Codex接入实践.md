@@ -1,15 +1,18 @@
 ---
 title: 自建 AI 网关实践:Ubuntu 22.04 无头部署 CLIProxyAPI + CC Switch 接入 Windows Codex
 date: 2026-10-25 20:00:00
+
+permalink: 2026/10/25/ubuntu-cliproxyapi-codex-gateway/
+cover: /images/covers/cli-proxy-api.svg
 tags:
   - CLIProxyAPI
   - CC-Switch
   - Codex
   - Antigravity
   - 自托管
+description: 在 Ubuntu 22.04 无头服务器上部署 CLIProxyAPI，通过 OAuth 登录 Google Antigravity 订阅，打通防火墙直连，并用 CC Switch 让 Windows 上的 Codex 接入。
 categories:
-  - 教程
-description: 在 Ubuntu 22.04 x86_64 无头服务器上部署 CLIProxyAPI,OAuth 登录 Google Antigravity 订阅,打通三层防火墙直连,最后用 CC Switch 让 Windows 上的 Codex 一键接入。附全程真实踩坑与解法。
+  - 技术教程
 ---
 
 把 CLI 订阅账号(OAuth)变成统一 OpenAI/Anthropic 兼容接口,再让本机任意 coding 客户端一键切换使用——这是我折腾 CLIProxyAPI 的动机。本文记录完整过程:服务器是**无桌面的 Ubuntu 22.04 x86_64 云主机**,客户端是 **Windows 上的 Codex**,中间用 **CC Switch** 管理配置。所有命令均为实操验证,坑也一个没落下。
@@ -200,3 +203,4 @@ curl.exe -o NUL -s -w "connect=%{time_connect}s ttfb=%{time_starttransfer}s`n" h
 - CLIProxyAPI:https://github.com/router-for-me/CLIProxyAPI
 - 官方文档:https://help.router-for.me
 - CC Switch:https://github.com/farion1231/cc-switch
+

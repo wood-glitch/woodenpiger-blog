@@ -1,6 +1,9 @@
 ---
 title: 10 美元的 OpenCode Go 套餐，一晚上就写回本了
 date: 2026-11-01 12:31:30
+
+permalink: 2026/11/01/opencode-go-review/
+cover: /images/covers/opencode-go.svg
 updated: 2026-11-01 12:31:30
 tags:
   - OpenCode
@@ -8,14 +11,14 @@ tags:
   - 订阅
   - Codex
   - Claude Code
-categories:
-  - 随笔
 description: 10 美元一个月的 OpenCode Go 套餐实测：一晚上跑了 2.53 亿 token、99% 缓存命中，5 小时额度只掉了 7%。附订阅入口、计费规则和适合人群。
 keywords:
   - OpenCode Go
   - AI 编程套餐
   - DeepSeek V4 Flash
   - 省钱
+categories:
+  - 随笔实测
 ---
 
 先给结论：**只要你在用 AI 写代码，OpenCode 的 Go 套餐基本是闭眼订的**。10 美元一个月，折合人民币 67 块左右，我那天晚上一个项目的消耗就把月费赚回来好几倍了。
@@ -79,3 +82,4 @@ keywords:
 套餐额度是按 **5 小时窗口 + 每周 + 每月** 三层滚动的，短时间猛冲只会消耗 5 小时那一层，长期看更该盯"每月"那个百分比。另外缓存命中率对额度影响极大，写代码时尽量让 AI 在同一个项目上下文里连续工作，不要频繁新开会话——同样的活，命中率从 99% 掉到 50%，额度消耗会差出好几倍。
 
 总之这个价格，我找不到不订的理由。
+

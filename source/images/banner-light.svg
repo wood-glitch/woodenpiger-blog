@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="warmGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.14"/>
+      <stop offset="55%" stop-color="#e8e2da" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f4f2ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ece8e1"/>
+      <stop offset="100%" stop-color="#f4f2ee"/>
+    </linearGradient>
+    <pattern id="lightGrid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(32,33,36,0.045)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#lightGrad)"/>
+  <rect width="1920" height="1080" fill="url(#lightGrid)"/>
+  <rect width="1920" height="1080" fill="url(#warmGlow)"/>
+</svg>

@@ -1,0 +1,90 @@
+/* =====================================================================
+   Cover images only.
+   Missing covers render nothing (no placeholder block, no empty frame).
+   ===================================================================== */
+
+.home-article-thumbnail,
+.article-cover-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: transparent;
+}
+
+.home-article-thumbnail {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.article-cover-media {
+  border-radius: 18px 18px 0 0;
+}
+
+.home-article-thumbnail > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 240ms ease, transform 320ms ease;
+}
+
+.cover-image.is-loaded {
+  opacity: 1;
+}
+
+.home-article-item:hover .cover-image {
+  transform: scale(1.015);
+}
+
+/* Home removes a failed thumbnail; articles keep the 16:9 stage so the title overlay stays anchored. */
+.home-article-thumbnail.cover-missing {
+  display: none !important;
+}
+
+.article-cover-media.cover-missing {
+  display: block !important;
+  background: linear-gradient(135deg, #111319 0%, #090a0e 60%, #1b0c10 100%);
+}
+
+.article-cover-media.cover-missing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+html.light .article-cover-media.cover-missing {
+  background: linear-gradient(135deg, #f4f2ee 0%, #ece8e1 60%, #f6e9eb 100%);
+}
+
+html.light .article-cover-media.cover-missing::before {
+  background-image:
+    linear-gradient(rgba(0,0,0,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.035) 1px, transparent 1px);
+}
+
+@media (max-width: 640px) {
+  .article-cover-media {
+    border-radius: 14px 14px 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-image {
+    transition: none;
+  }
+  .home-article-item:hover .cover-image {
+    transform: none;
+  }
+}

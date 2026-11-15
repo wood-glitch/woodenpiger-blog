@@ -1,0 +1,409 @@
+/* Neon link cards for external article links */
+
+.article-content {
+  --neon-accent: #38BDF8;
+  --neon-accent-strong: #60A5FA;
+  --neon-accent-soft: #7DD3FC;
+  --neon-accent-deep: #0284C7;
+  --neon-glow: rgba(56, 189, 248, 0.18);
+  --neon-border: rgba(56, 189, 248, 0.26);
+  --neon-radius-card: 18px;
+  --neon-radius-pill: 9px;
+}
+
+html.light .article-content {
+  --neon-accent: #0284C7;
+  --neon-accent-strong: #2563EB;
+  --neon-glow: rgba(2, 132, 199, 0.12);
+  --neon-border: rgba(2, 132, 199, 0.18);
+}
+
+/* Base neon style when JS has not run yet */
+.article-content a.link {
+  color: var(--neon-accent);
+  text-decoration-color: rgba(56, 189, 248, 0.45);
+  text-underline-offset: 3px;
+}
+
+.article-content a.link:hover {
+  color: var(--neon-accent-strong);
+  text-decoration-color: var(--neon-accent-strong);
+}
+/* ---------- Full card ---------- */
+.neon-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 1.6rem 0;
+  padding: 22px;
+  border-radius: var(--neon-radius-card);
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+}
+
+.neon-link-card__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.neon-link-card__icon {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  color: var(--neon-accent);
+}
+
+.neon-link-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.neon-link-card__host {
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+.neon-link-card__path {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  opacity: 0.72;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.neon-link-card__title {
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.neon-link-card__code {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.neon-code-label { opacity: 0.75; }
+
+.neon-code-value {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.neon-link-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.neon-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.neon-link-btn--primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #0284C7, #2563EB);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.28);
+}
+
+.neon-link-btn--primary:hover {
+  background: linear-gradient(135deg, #2563EB, #0284C7);
+  box-shadow: 0 10px 26px rgba(56, 189, 248, 0.4);
+  transform: translateY(-1px);
+}
+
+.neon-link-btn--ghost {
+  padding: 5px 12px;
+  min-height: 32px;
+  font-size: 0.8rem;
+}
+/* ---------- Inline pill ---------- */
+.article-content a.neon-link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  margin: 2px 1px;
+  padding: 4px 10px;
+  border-radius: var(--neon-radius-pill);
+  border: 1px solid transparent;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  text-decoration: none !important;
+  vertical-align: baseline;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.neon-link-pill__icon {
+  flex: 0 0 auto;
+  font-size: 0.9em;
+  color: var(--neon-accent);
+}
+
+.neon-link-pill__text {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.neon-link-pill__host {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 14em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.76em;
+  opacity: 0.7;
+}
+
+.neon-link-pill__arrow {
+  flex: 0 0 auto;
+  font-size: 0.68em;
+  opacity: 0.8;
+}
+/* ---------- Dark theme ---------- */
+html.dark .neon-link-card {
+  background: linear-gradient(145deg, #0c0d11 0%, #08090c 100%);
+  border-color: rgba(56, 189, 248, 0.22);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.05), 0 16px 38px rgba(0, 0, 0, 0.55), 0 0 30px rgba(56, 189, 248, 0.07);
+}
+
+html.dark .neon-link-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.1), 0 20px 46px rgba(0, 0, 0, 0.6), 0 0 40px rgba(56, 189, 248, 0.14);
+  transform: translateY(-2px);
+}
+
+html.dark .neon-link-card__host { color: #f2f3f5; }
+html.dark .neon-link-card__path { color: #9ca1aa; }
+html.dark .neon-link-card__title { color: #e6e7ea; }
+html.dark .neon-link-card__icon { background: rgba(56, 189, 248, 0.12); }
+html.dark .neon-link-card__code { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); }
+html.dark .neon-code-value { background: rgba(56, 189, 248, 0.16); color: #7DD3FC; }
+
+html.dark .neon-link-btn:not(.neon-link-btn--primary) {
+  color: #e6e7ea;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark .neon-link-btn:not(.neon-link-btn--primary):hover {
+  color: var(--neon-accent-strong);
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(56, 189, 248, 0.1);
+}
+
+html.dark .article-content a.neon-link-pill {
+  color: #e6e7ea;
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.26);
+}
+
+html.dark .article-content a.neon-link-pill:hover {
+  color: #7DD3FC;
+  border-color: rgba(56, 189, 248, 0.55);
+  background: rgba(56, 189, 248, 0.16);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.22);
+}
+/* ---------- Light theme ---------- */
+html.light .neon-link-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.04), 0 12px 30px rgba(0, 0, 0, 0.07), 0 0 26px rgba(56, 189, 248, 0.07);
+}
+
+html.light .neon-link-card:hover {
+  border-color: rgba(56, 189, 248, 0.32);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.07), 0 16px 38px rgba(0, 0, 0, 0.09), 0 0 32px rgba(56, 189, 248, 0.12);
+  transform: translateY(-2px);
+}
+
+html.light .neon-link-card__host { color: #202124; }
+html.light .neon-link-card__path { color: #5c6669; }
+html.light .neon-link-card__title { color: #202124; }
+html.light .neon-link-card__icon { background: rgba(56, 189, 248, 0.1); }
+html.light .neon-link-card__code { background: rgba(0, 0, 0, 0.03); border: 1px solid rgba(0, 0, 0, 0.07); }
+html.light .neon-code-value { background: rgba(56, 189, 248, 0.12); color: #0284C7; }
+
+html.light .neon-link-btn:not(.neon-link-btn--primary) {
+  color: #202124;
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .neon-link-btn:not(.neon-link-btn--primary):hover {
+  color: #0284C7;
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.08);
+}
+
+html.light .article-content a.neon-link-pill {
+  color: #202124;
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.24);
+}
+
+html.light .article-content a.neon-link-pill:hover {
+  color: #0284C7;
+  border-color: rgba(56, 189, 248, 0.5);
+  background: rgba(56, 189, 248, 0.13);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.18);
+}
+/* ---------- Focus ---------- */
+.neon-link-card :focus-visible,
+.article-content a.neon-link-pill:focus-visible,
+.neon-link-btn:focus-visible {
+  outline: 2px solid var(--neon-accent-strong);
+  outline-offset: 2px;
+}
+
+/* ---------- Toast ---------- */
+.neon-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  z-index: 10001;
+  max-width: min(90vw, 420px);
+  padding: 10px 18px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 12px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.neon-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+html.dark .neon-toast {
+  background: rgba(18, 18, 20, 0.94);
+  color: #f2f3f5;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+html.light .neon-toast {
+  background: rgba(255, 255, 255, 0.96);
+  color: #202124;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .neon-link-card {
+    padding: 18px;
+    border-radius: 16px;
+    gap: 12px;
+  }
+
+  .neon-link-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .neon-link-btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .neon-link-card__path {
+    font-size: 0.74rem;
+  }
+
+  .article-content a.neon-link-pill {
+    max-width: 100%;
+    padding: 5px 9px;
+  }
+
+  .neon-link-pill__host {
+    max-width: 8em;
+  }
+
+  .neon-toast {
+    bottom: 20px;
+    font-size: 0.8125rem;
+    padding: 9px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neon-link-card,
+  .neon-link-btn,
+  .article-content a.neon-link-pill,
+  .neon-toast {
+    transition: none;
+  }
+
+  .neon-link-card:hover {
+    transform: none;
+  }
+}
+
+/* Inline X brand icon (FontAwesome 6.2.1 has no fa-x-twitter) */
+.neon-x-svg {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.125em;
+  flex: 0 0 auto;
+}
+
+.neon-link-card__icon .neon-x-svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+/* Keep the extraction-code chip blue despite global inline-code styles */
+html.dark .article-content .neon-code-value {
+  background: rgba(56, 189, 248, 0.16) !important;
+  color: #7DD3FC !important;
+}
+
+html.light .article-content .neon-code-value {
+  background: rgba(2, 132, 199, 0.12) !important;
+  color: #0284C7 !important;
+}

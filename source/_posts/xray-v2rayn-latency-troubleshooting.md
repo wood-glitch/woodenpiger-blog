@@ -1,25 +1,33 @@
 ---
-title: 学习ai分享
+title: Xray + v2rayN 延迟显示 -1 的排查记录
 date: 2026-10-18
+
+cover: /images/covers/xray-v2rayn.svg
+description: AWS Lightsail 上 Xray VLESS + REALITY 部署后，v2rayN 真连接延迟显示 -1 的完整排查过程：先从服务状态、端口监听、云防火墙与 UFW 逐层定位，再核对 REALITY 参数。
+keywords:
+  - Xray
+  - v2rayN
+  - VLESS REALITY
+  - AWS Lightsail
+  - 防火墙排查
 tags:
   - 魔法上网
   - 教程搭建
 categories:
-  - 实用工具的分享
+  - 技术教程
 ---
-xray安装教程AWS免费服务器Amazon Lightsail
 ## 第 1 步：更新系统 + 开 BBR 加速
 
 在 SSH 窗口里逐条执行：
 
 
+```bash
 apt update -y
-
-
 
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
+```
 
 验证一下，输 `sysctl net.ipv4.tcp_congestion_control`，显示 `= bbr` 就对了。
 
@@ -348,3 +356,4 @@ curl -4 https://checkip.amazonaws.com
 ```powershell
 Test-NetConnection <服务器公网IP> -Port 29759
 ```
+

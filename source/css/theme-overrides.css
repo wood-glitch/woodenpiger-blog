@@ -1,0 +1,686 @@
+/* Component overrides and dark/light UI refinements */
+
+
+/* ---------- 2. Page base & typography ---------- */
+html.dark,
+html.dark body {
+  background-color: #000000 !important;
+  color: var(--default-text-color);
+}
+
+html.dark .page-container,
+html.dark .main-content-container,
+html.dark .main-content-body,
+html.dark .main-content {
+  background-color: transparent;
+}
+
+html.dark ::selection {
+  background: var(--selection-color);
+  color: #ffffff;
+}
+
+html.dark ::-webkit-scrollbar-thumb { background: #2a2a2a; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
+html.dark ::-webkit-scrollbar-track { background: #000000; }
+html.dark { scrollbar-color: #2a2a2a #000000; }
+
+/* ---------- 3. Navbar ---------- */
+html.dark .navbar-container {
+  background: rgba(5, 5, 5, 0.92) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .navbar-list .navbar-item .sub-menu,
+html.dark .navbar-list .navbar-item:hover .sub-menu {
+  background-color: #090909 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.72);
+}
+
+html.dark .navbar-list .navbar-item .sub-menu li a:hover {
+  background-color: #111111 !important;
+  color: var(--primary-color) !important;
+}
+
+html.dark .navbar-drawer {
+  background-color: #050505 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: -24px 0 64px rgba(0, 0, 0, 0.72);
+}
+
+html.dark .window-mask {
+  background: rgba(0, 0, 0, 0.72) !important;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+/* Light mode navbar must stay light (config color is shared by both modes). */
+html.light .navbar-container {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- 4. Cards / sidebar / footer ---------- */
+html.dark .home-article-item,
+html.dark .sidebar-content,
+html.dark .sidebar-links,
+html.dark .article-content-container,
+html.dark .page-template-container,
+html.dark .archive-container,
+html.dark .tag-container,
+html.dark .nf-container,
+html.dark .friends-link-container .content,
+html.dark .bookmark-nav-item.active,
+html.dark .article-prev,
+html.dark .article-next {
+  background-color: #050505 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.dark .home-article-item:hover,
+html.dark .sidebar-links .links:hover,
+html.dark .article-prev:hover,
+html.dark .article-next:hover {
+  background-color: #090909 !important;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.72);
+}
+
+html.dark .sidebar-links .site-info {
+  background-color: #090909 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.dark .footer {
+  background-color: #050505 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -20px 48px rgba(0, 0, 0, 0.55);
+}
+
+html.dark .footer-created-at { color: #9ca1aa; }
+
+html.dark .mobile-drawer-footer { border-top-color: var(--border-color); }
+
+/* ---------- 5. Search ---------- */
+html.dark .search-pop-overlay.active { background: rgba(0, 0, 0, 0.72); }
+
+html.dark .search-popup {
+  background-color: #080808 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+}
+
+html.dark .search-header {
+  background-color: #080808 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.dark .search-input {
+  background-color: #080808 !important;
+  color: #e6e7ea !important;
+  border-radius: 8px;
+  padding-left: 6px;
+}
+
+html.dark .search-input::placeholder { color: #7d8590; }
+html.dark #search-result { background-color: #080808; }
+html.dark #search-result li { border-bottom-color: rgba(255, 255, 255, 0.08); }
+html.dark #search-result a { color: #c9ccd1; }
+html.dark #search-result a:hover { color: #60A5FA; }
+html.dark #no-result { color: #7d8590; }
+
+/* ---------- 6. Pagination ---------- */
+html.dark .paginator a.page-number,
+html.dark .paginator span.page-number,
+html.dark .paginator a.prev,
+html.dark .paginator a.next,
+html.dark .paginator .space {
+  background-color: #050505 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #c9ccd1;
+}
+
+html.dark .paginator a.page-number:hover,
+html.dark .paginator a.prev:hover,
+html.dark .paginator a.next:hover,
+html.dark .paginator a.extend:hover {
+  background-color: #090909 !important;
+  color: #60A5FA !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html.dark .paginator a.active,
+html.dark .paginator span.current {
+  background-color: var(--primary-color) !important;
+  border-color: transparent !important;
+  color: #031018 !important;
+}
+
+html.dark .paginator i.fa-regular { color: #9ca1aa; }
+
+/* ---------- 7. Code blocks ---------- */
+html.dark .code-container {
+  position: relative !important;
+  padding-top: 38px !important;
+  border-radius: 12px !important;
+  background: #090909 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6) !important;
+  overflow: hidden !important;
+}
+
+html.dark .code-container::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 13px !important;
+  left: 18px !important;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background: #fc625d !important;
+  box-shadow: 20px 0 0 #fdbc40, 40px 0 0 #35cd4b !important;
+  z-index: 10 !important;
+  display: block !important;
+}
+
+html.dark .code-container::before {
+  content: attr(data-rel) !important;
+  position: absolute !important;
+  top: 10px !important;
+  left: 84px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #7d8590 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  z-index: 10 !important;
+}
+
+html.dark .code-container .highlight,
+html.dark .code-container pre,
+html.dark .highlight,
+html.dark .highlight .code pre {
+  background-color: #090909 !important;
+}
+
+html.dark .highlight .gutter pre {
+  background-color: #050505 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+html.dark .copy-button,
+html.dark .fold-button {
+  background-color: #090909 !important;
+  color: #9ca1aa !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .copy-button:hover,
+html.dark .fold-button:hover {
+  background-color: #111111 !important;
+  color: #60A5FA !important;
+}
+
+html.dark .markdown-body :not(pre) > code {
+  background-color: #090909 !important;
+  color: #d7dae0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+/* ---------- 8. Article body ---------- */
+html.dark .article-title-cover {
+  background-color: rgba(0, 0, 0, 0.62) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .markdown-body blockquote:not(.not-markdown) {
+  background-color: #090909 !important;
+  border-left-color: rgba(56, 189, 248, 0.75);
+  color: #c9ccd1;
+}
+
+html.dark .markdown-body > table thead th,
+html.dark .markdown-body .tab-pane > table thead th {
+  background-color: #090909 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .markdown-body > table tr,
+html.dark .markdown-body .tab-pane > table tr {
+  background-color: #050505 !important;
+}
+
+html.dark .markdown-body > table tr:nth-child(2n),
+html.dark .markdown-body .tab-pane > table tr:nth-child(2n) {
+  background-color: #080808 !important;
+}
+
+html.dark .markdown-body > table td,
+html.dark .markdown-body > table th,
+html.dark .markdown-body .tab-pane > table td,
+html.dark .markdown-body .tab-pane > table th {
+  border-left-color: rgba(255, 255, 255, 0.08) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .article-copyright-info-container {
+  background-color: #090909 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.dark details > summary:hover,
+html.dark details[open] > summary {
+  background-color: #090909 !important;
+}
+
+html.dark .callout.default,
+html.dark .callout.gray {
+  --callout-bg-color: #090909;
+  --callout-bg-color-strong: #111111;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html.dark .article-date .hover-info,
+html.dark .image-title,
+html.dark .image-description,
+html.dark .image-viewer-prev,
+html.dark .image-viewer-next,
+html.dark .image-viewer-close {
+  background-color: #090909 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .image-viewer-container.active { background: rgba(0, 0, 0, 0.86); }
+
+/* ---------- 9. TOC ---------- */
+html.dark .post-toc .toc-title { color: #f2f3f5; }
+html.dark .post-toc .page-title { color: #e6e7ea; }
+html.dark .post-toc .nav .nav-number,
+html.dark .post-toc .nav .nav-text { color: #9ca1aa; }
+html.dark .post-toc .nav .active > a .nav-number,
+html.dark .post-toc .nav .active > a .nav-text,
+html.dark .post-toc .nav .active-current .nav-number,
+html.dark .post-toc .nav .active-current .nav-text { color: #60A5FA !important; }
+html.dark .post-toc ol ol { border-left-color: rgba(255, 255, 255, 0.08); }
+
+/* ---------- 10. Floating tools ---------- */
+html.dark .right-bottom-tools,
+html.dark .post-tools-container .article-tools-list li {
+  background-color: #050505 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6) !important;
+  color: #c9ccd1;
+}
+
+html.dark .right-bottom-tools:hover,
+html.dark .post-tools-container .article-tools-list li:hover {
+  background-color: #090909 !important;
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #60A5FA !important;
+}
+
+html.dark .right-bottom-tools i,
+html.dark .post-tools-container .article-tools-list li i { color: inherit; }
+
+/* ---------- 11. Taxonomy / archive / misc cards ---------- */
+html.dark .all-category-list-item {
+  background-color: #050505 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html.dark .all-category-list-item:hover {
+  background-color: #090909 !important;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+html.dark .all-category-list-count {
+  background-color: #090909 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .tag-list a {
+  background-color: #050505 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #c9ccd1;
+}
+
+html.dark .tag-list a:hover {
+  background-color: var(--primary-color) !important;
+  border-color: transparent;
+  color: #031018 !important;
+}
+
+html.dark .tag-list[data-show-value] a::after {
+  background-color: #090909 !important;
+  color: #9ca1aa;
+}
+
+html.dark .archive-year-post-count {
+  background-color: #090909 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .archive-list-container .article-item {
+  border-left-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .archive-list-container .article-item::after {
+  background-color: #050505 !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+html.dark .bookmark-nav-item:hover { background-color: #090909 !important; border-color: rgba(255, 255, 255, 0.1) !important; }
+html.dark .bookmark-nav-item.active { background-color: #090909 !important; border-color: rgba(255, 255, 255, 0.12) !important; }
+
+html.dark .btn,
+html.dark a.button {
+  background-color: #090909 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #c9ccd1;
+}
+
+html.dark .btn:hover,
+html.dark a.button:hover,
+html.dark .btn:focus,
+html.dark a.button:focus {
+  background-color: #111111 !important;
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #60A5FA !important;
+}
+
+/* ---------- 12. Tailwind gray / zinc / neutral / slate / stone cleanup ---------- */
+html.dark [class*="dark:bg-gray-"],
+html.dark [class*="dark:bg-zinc-"],
+html.dark [class*="dark:bg-neutral-"],
+html.dark [class*="dark:bg-slate-"],
+html.dark [class*="dark:bg-stone-"] {
+  background-color: #090909 !important;
+}
+
+html.dark [class*="dark:border-gray-"],
+html.dark [class*="dark:border-zinc-"],
+html.dark [class*="dark:border-neutral-"],
+html.dark [class*="dark:border-slate-"],
+html.dark [class*="dark:border-stone-"] {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .social-contacts {
+  background-color: #090909 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6) !important;
+}
+
+html.light .social-contacts {
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+}
+
+html.dark .social-qr-container {
+  background-color: #090909 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .essay-date {
+  background-color: #090909 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ---------- 13. Banner sizing & texture (desktop 60-72vh, mobile 46-55vh) ---------- */
+.home-banner-container {
+  height: 68vh !important;
+  min-height: 0 !important;
+}
+
+.home-banner-container .content {
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 1.25rem;
+}
+
+.home-banner-container .description { line-height: 1.35; }
+
+@media (max-width: 640px) {
+  .home-banner-container {
+    height: 50vh !important;
+    min-height: 0 !important;
+  }
+  .home-banner-container .description {
+    font-size: 1.85rem !important;
+  }
+  .home-banner-container .description p span,
+  .home-banner-container .description p i {
+    font-size: 0.95rem !important;
+  }
+}
+
+html.dark .home-banner-background { filter: none !important; }
+html.dark .home-banner-container .content { color: #e8e8e8; }
+
+/* ---------- 14. Bilibili Lv6 badge (must stay official red/white) ---------- */
+.bili-lv6-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex: 0 0 auto;
+  width: 44px;
+  height: auto;
+  line-height: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bili-lv6-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bili-lv6-badge:hover {
+  opacity: 0.92;
+  transform: scale(1.03);
+}
+
+.author-label {
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+}
+
+.sidebar-content .author .label,
+.article-header .author .label,
+.mobile-author-card .label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+@media (max-width: 640px) {
+  .bili-lv6-badge { width: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bili-lv6-badge { transition: none; }
+}
+
+/* ---------- 15. Reading-count layout stability ---------- */
+.post-pv-value,
+.home-article-pv .post-pv-value,
+.archive-post-pv .post-pv-value {
+  display: inline-block;
+  min-width: 3.4em;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.pv-unavailable { color: #7d8590; }
+
+.home-article-pv,
+.archive-post-pv {
+  color: var(--third-text-color);
+  white-space: nowrap;
+}
+
+.home-article-pv .pv-label,
+.archive-post-pv .pv-label { margin-right: 1px; }
+
+.archive-post-row { width: 100%; }
+/* ---------- 16. Mobile drawer author card ---------- */
+.navbar-drawer .mobile-drawer-footer { border-top: 1px solid var(--border-color); }
+.navbar-drawer .mobile-author-card { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 8px 4px 6px; flex-wrap: nowrap; }
+.navbar-drawer .drawer-author-avatar { width: 36px !important; height: 36px !important; min-width: 36px; max-width: 36px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border-color); flex: 0 0 36px; }
+.navbar-drawer .mobile-author-card .author { display: flex; flex-direction: row; align-items: center; gap: 6px; flex-wrap: nowrap; min-width: 0; }
+.navbar-drawer .mobile-author-card .name { font-size: 1rem; font-weight: 600; color: var(--second-text-color); white-space: nowrap; }
+.navbar-drawer .mobile-author-card .bili-lv6-badge { width: 38px; }
+
+/* ---------- 16b. Light mode article cover title ---------- */
+html.light .article-title-cover {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #202124 !important;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.22);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+}
+
+/* ---------- 17. Reading count on narrow screens ---------- */
+@media (max-width: 640px) {
+  .article-title-cover {
+    max-width: calc(100% - 24px) !important;
+    margin: 12px !important;
+    padding: 10px 14px !important;
+    border-radius: 12px !important;
+    font-size: clamp(1.45rem, 6.2vw, 1.8rem) !important;
+    line-height: 1.25 !important;
+  }
+}
+
+.article-pv { white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .article-pv .post-pv-value { min-width: 2.2em; }
+}
+/* ---------- 18. Social links: X icon, hit area, toast ---------- */
+.social-contact-item a,
+.social-contact-item button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-contact-item a:hover,
+.social-contact-item button:hover,
+.social-contact-item a:focus-visible,
+.social-contact-item button:focus-visible {
+  color: #60A5FA;
+  background-color: rgba(96, 165, 250, 0.12);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.social-contact-item a:active,
+.social-contact-item button:active {
+  transform: translateY(0);
+}
+
+/* FontAwesome 6.2.1 has no fa-x-twitter: draw the official X mark via mask. */
+.social-contact-item .fa-x-twitter {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: -0.2em;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE4LjI0NCAyLjI1aDMuMzA4bC03LjIyNyA4LjI2IDguNTAyIDExLjI0SDE2LjE3bC01LjIxNC02LjgxN0w0Ljk5IDIxLjc1SDEuNjhsNy43My04LjgzNUwxLjI1NCAyLjI1SDguMDhsNC43MTMgNi4yMzF6bS0xLjE2MSAxNy41MmgxLjgzM0w3LjA4NCA0LjEyNkg1LjExN3oiLz48L3N2Zz4=") center / contain no-repeat;
+  mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE4LjI0NCAyLjI1aDMuMzA4bC03LjIyNyA4LjI2IDguNTAyIDExLjI0SDE2LjE3bC01LjIxNC02LjgxN0w0Ljk5IDIxLjc1SDEuNjhsNy43My04LjgzNUwxLjI1NCAyLjI1SDguMDhsNC43MTMgNi4yMzF6bS0xLjE2MSAxNy41MmgxLjgzM0w3LjA4NCA0LjEyNkg1LjExN3oiLz48L3N2Zz4=") center / contain no-repeat;
+}
+
+.social-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  z-index: 10000;
+  max-width: min(90vw, 420px);
+  padding: 10px 18px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 12px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.social-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+html.dark .social-toast {
+  background: rgba(18, 18, 20, 0.94);
+  color: #f2f3f5;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+html.light .social-toast {
+  background: rgba(255, 255, 255, 0.96);
+  color: #202124;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 640px) {
+  .social-toast {
+    bottom: 20px;
+    font-size: 0.8125rem;
+    padding: 9px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-contact-item a,
+  .social-contact-item button,
+  .social-toast {
+    transition: none;
+  }
+}
+
+.bili-lv6-badge:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+

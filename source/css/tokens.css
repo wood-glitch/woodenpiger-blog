@@ -1,0 +1,71 @@
+/* Design tokens: page/surface/text/border/shadow/z-index */
+/* =====================================================================
+   WoodenPiger Blog — dark mode pure-black surface system
+   Scope: html.dark only. Light mode keeps its own palette.
+   No filter: invert / grayscale. All overrides are targeted.
+   ===================================================================== */
+
+/* ---------- 1. Design tokens ---------- */
+html.dark {
+  color-scheme: dark;
+
+  /* page / surfaces */
+  --background-color: #000000;
+  --background-color-transparent: rgba(0, 0, 0, 0.72);
+  --background-color-transparent-15: rgba(5, 5, 5, 0.15);
+  --background-color-transparent-40: rgba(5, 5, 5, 0.72);
+  --background-color-transparent-80: rgba(5, 5, 5, 0.92);
+
+  --second-background-color: #050505;
+  --third-background-color: #090909;
+  --third-background-color-transparent: rgba(9, 9, 9, 0.72);
+  --default-background-color: #050505;
+  --scond-background-color: #090909; /* theme typo kept for compatibility */
+
+  /* text */
+  --first-text-color: #f2f3f5;
+  --second-text-color: #e6e7ea;
+  --default-text-color: #c9ccd1;
+  --third-text-color: #9ca1aa;
+  --fourth-text-color: rgba(255, 255, 255, 0.16);
+  --invert-text-color: #111111;
+  --link-color: #e6e7ea;
+
+  /* borders & shadows */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-color-1: rgba(255, 255, 255, 0.08);
+  --shadow-color-2: rgba(0, 0, 0, 0.6);
+  --shadow-hover-color: rgba(0, 0, 0, 0.8);
+
+  --redefine-box-shadow: rgba(0, 0, 0, 0.6) 0 8px 28px 0, rgba(255, 255, 255, 0.08) 0 0 0 1px;
+  --redefine-box-shadow-hover: rgba(0, 0, 0, 0.72) 0 14px 38px 0, rgba(255, 255, 255, 0.1) 0 0 0 1px;
+  --redefine-box-shadow-flat: rgba(0, 0, 0, 0.6) 0 1px 4px 0, rgba(255, 255, 255, 0.08) 0 0 0 1px;
+  --redefine-box-shadow-flat-hover: rgba(0, 0, 0, 0.66) 0 6px 18px 0, rgba(255, 255, 255, 0.1) 0 0 0 1px;
+
+  /* scrollbar / selection */
+  --scrollbar-color: #2a2a2a;
+  --scrollbar-color-hover: #3a3a3a;
+  --scroll-bar-bg-color: #000000;
+  --selection-color: rgba(56, 189, 248, 0.38);
+
+  /* code */
+  --inline-code-background: #090909;
+  --inline-code-foreground: #d7dae0;
+  --highlight-background: #090909;
+  --highlight-gutter-bg-color: #050505;
+  --highlight-gutter-color: #6b7280;
+
+  /* Tailwind custom colors that read theme vars */
+  --color-background-color: #000000;
+  --color-second-background-color: #050505;
+  --color-third-background-color: #090909;
+  --color-background-color-transparent: rgba(0, 0, 0, 0.72);
+  --color-background-color-transparent-15: rgba(5, 5, 5, 0.15);
+  --color-background-color-transparent-40: rgba(5, 5, 5, 0.72);
+}
+
+/* Light mode: darker blue for readable text on white */
+html.light {
+  --primary-color: #0284C7;
+  --secondary-color: #2563EB;
+}

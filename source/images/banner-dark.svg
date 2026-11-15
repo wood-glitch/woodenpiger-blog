@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="crimsonGlow" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.16"/>
+      <stop offset="45%" stop-color="#3a1017" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#040404"/>
+      <stop offset="55%" stop-color="#020202"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <pattern id="techGrid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255,255,255,0.028)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  <rect width="1920" height="1080" fill="url(#techGrid)"/>
+  <rect width="1920" height="1080" fill="url(#crimsonGlow)"/>
+  <line x1="0" y1="1079" x2="1920" y2="1079" stroke="rgba(56,189,248,0.22)" stroke-width="1"/>
+</svg>

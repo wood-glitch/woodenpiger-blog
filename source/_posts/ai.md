@@ -1,8 +1,20 @@
 ---
-title: 新手如何用 AI 写代码 part1_在 vscode 上搭载 Claude code
+title: 新手如何用 AI 写代码（Part 1）：在 VS Code 中配置 Claude Code
 tags: [AI, VSCode, Claude, 编程]
-categories: [教程，技术]
 date: 2026-04-12 19:33:00
+
+
+permalink: 2026/04/12/vscode-claude-code-setup/
+cover: /images/covers/ai-claude-code.svg
+description: 在 VS Code 中安装 Claude Code 插件、配置 Node.js 与 Git 环境，并通过 CC Switch 接入 Longcat 等第三方 API 的完整上手记录。
+keywords:
+  - Claude Code
+  - VS Code
+  - CC Switch
+  - AI 编程
+  - 新手教程
+categories:
+  - 技术教程
 ---
 
 今天，我来教大家如何在 Vscode 上部署 Claude code 以便用 ai 来写代码。
@@ -13,13 +25,13 @@ date: 2026-04-12 19:33:00
 
 ![屏幕截图](/images/screenshot-2026-04-06.png) 这是出生狂魔哥
 
-好了，闲话少说，现在正片开始。Step1:安装 Vscode 这个我想大家应该都会安装  这个非常简单 只需要在浏览器输入 Vscode 搜素 就行  这是他的官网页面  然后为了防止有些人找不到  我会把官网链接放在这里 https://code.visualstudio.com/ ![官网页面](/images/0a516f0fa3f34188aaa223919275e21a.png)
+好了，闲话少说，现在正片开始。Step1:安装 Vscode 这个我想大家应该都会安装  这个非常简单 只需要在浏览器输入 Vscode 搜索 就行  这是他的官网页面  然后为了防止有些人找不到  我会把官网链接放在这里 https://code.visualstudio.com/ ![官网页面](/images/0a516f0fa3f34188aaa223919275e21a.png)
 
-嘿嘿嘿 这就是他的官网链接  是不是 ui 非常 good。然后安装打开 Vscode，因为这个 Vscoode 是外国的编译器 他的初始语言是英文  所以我们要在扩展中安装中文插件。就是这个安装完重启 就显示中文了。
+嘿嘿嘿 这就是他的官网链接  是不是 ui 非常 good。然后安装打开 Vscode，因为这个 VS Code 是外国的编译器 他的初始语言是英文  所以我们要在扩展中安装中文插件。就是这个安装完重启 就显示中文了。
 
-![中文插件](/images/018368b77819bfa3485a28a994c8dd28.png).
+![中文插件](/images/018368b77819bfa3485a28a994c8dd28.png)
 
-然后在再扩展里面安装 Claude code 插件 就是这个 Anthropic。![Anthropic](/images/b357b37812ffa6cb7d558300c1e3d6fa.png)
+然后在扩展里面安装 Claude code 插件 就是这个 Anthropic。![Anthropic](/images/b357b37812ffa6cb7d558300c1e3d6fa.png)
 
 安装完成你的 Vscode 页面右上角会出现   一个橘色的毛线球 这个就是 Claude code 点击这个毛线球  
 
@@ -67,3 +79,4 @@ git:https://git-scm.com/![git 下载](/images/c7eed2721f2684050962ffde79cdc8e6.p
 ![粘贴 api key](/images/224ad5c57ec2152889c838447a0cae9a.png)
 
 最后打开你的 Vscode 你就可以在 vscode 上使用 Claude 用 ai 来解决你的编程问题。
+
