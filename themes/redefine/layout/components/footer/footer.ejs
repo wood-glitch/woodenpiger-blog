@@ -90,9 +90,9 @@
                 <% if (theme.inject.footer[i] !== null ){ %>
 
                     <% if (theme.global.single_page === true) { %>
-                        <%- theme.inject.footer[i].replace("<script", "<script data-swup-reload-script") %>
+                        <%- versionLocalAssetTag(theme.inject.footer[i].replace("<script", "<script data-swup-reload-script")) %>
                     <% } else { %>
-                        <%- theme.inject.footer[i] %>
+                        <%- versionLocalAssetTag(theme.inject.footer[i]) %>
                 <% } } %>
         <% } }%>
         

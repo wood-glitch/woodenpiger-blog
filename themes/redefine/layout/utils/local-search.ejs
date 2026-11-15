@@ -1,19 +1,19 @@
-<div class="search-pop-overlay">
+<div id="local-search-overlay" class="search-pop-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="站内搜索">
 	<div class="popup search-popup">
 		<div class="search-header">
-			<span class="search-input-field-pre">
+			<span class="search-input-field-pre" aria-hidden="true">
 				<i class="fa-solid fa-keyboard"></i>
 			</span>
 			<div class="search-input-container">
-				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="<%= __('search') %>" spellcheck="false" type="search" class="search-input">
+				<input id="local-search-input" autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="输入搜索关键词" placeholder="<%= __('search') %>" spellcheck="false" type="search" class="search-input">
 			</div>
-			<span class="popup-btn-close">
-				<i class="fa-solid fa-times"></i>
-			</span>
+			<button type="button" class="popup-btn-close" aria-label="关闭搜索">
+				<i class="fa-solid fa-times" aria-hidden="true"></i>
+			</button>
 		</div>
-		<div id="search-result">
+		<div id="search-result" aria-live="polite">
 			<div id="no-result">
-				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+				<i class="fa-solid fa-magnifying-glass fa-5x fa-fw"></i>
 			</div>
 		</div>
 	</div>

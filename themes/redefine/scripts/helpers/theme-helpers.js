@@ -6,6 +6,8 @@ const url = require("url");
 const { ensurePrefix } = require("../utils/log-prefix");
 const { version } = require("../../package.json");
 const themeVersion = version;
+const LOCAL_ASSET_VERSION =
+  process.env.HEXO_ASSET_VERSION || `local-${Date.now().toString(36)}`;
 
 hexo.extend.helper.register("isHomePagePagination", function (pagePath, route) {
   if (pagePath.length > 5 && route === "/") {
@@ -95,6 +97,18 @@ hexo.extend.helper.register("getPostUrl", function (rootUrl, path) {
   return "/" + relative;
 });
 
+hexo.extend.helper.register("versionLocalAssetTag", function (tag) {
+  return String(tag).replace(
+    /\b(href|src)=(["'])(\/[^"'?#]+)(\?[^"']*)?\2/g,
+    function (match, attr, quote, assetPath, query) {
+      if (assetPath.startsWith("//")) return match;
+      if (query && /(?:^|[?&])v=/.test(query)) return match;
+      const separator = query ? "&" : "?";
+      return `${attr}=${quote}${assetPath}${query || ""}${separator}v=${LOCAL_ASSET_VERSION}${quote}`;
+    },
+  );
+});
+
 hexo.extend.helper.register("renderJS", function (path, options = {}) {
   const _js = hexo.extend.helper.get("js").bind(hexo);
   const { module = false, async = false, swupReload = false } = options;
@@ -150,7 +164,10 @@ hexo.extend.helper.register("renderJS", function (path, options = {}) {
         type: module ? "module" : undefined,
         "data-swup-reload-script": swupReload ? "" : undefined,
         // async: async,
-      });
+      }).replace(
+        /(src=(["'])[^"']+\.js)(\2)/,
+        `$1?v=${LOCAL_ASSET_VERSION}$3`,
+      );
     }
 
     return scriptTag;
@@ -202,7 +219,10 @@ hexo.extend.helper.register("renderCSS", function (path) {
           .replace(":path", path)}">`;
       }
     } else {
-      cssLink = _css(path);
+      cssLink = _css(path).replace(
+        /(href=(["'])[^"']+\.css)(\2)/,
+        `$1?v=${LOCAL_ASSET_VERSION}$3`,
+      );
     }
 
     return cssLink;
@@ -213,6 +233,10 @@ hexo.extend.helper.register("renderCSS", function (path) {
   } else {
     return cdnPathHandle(path);
   }
+});
+
+hexo.extend.helper.register("getAssetVersion", function () {
+  return LOCAL_ASSET_VERSION;
 });
 
 hexo.extend.helper.register("getThemeVersion", function () {

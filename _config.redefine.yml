@@ -393,6 +393,7 @@ inject:
     - <link rel="stylesheet" href="/css/donate.css">
   footer:
     - <script src="/js/ui-core.js"></script>
+    - <script src="/js/mobile-ui.js"></script>
     - <script src="/js/counter.js"></script>
     - <script src="/js/cover.js"></script>
     - <script src="/js/social.js"></script>

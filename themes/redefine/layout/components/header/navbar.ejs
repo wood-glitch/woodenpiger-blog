@@ -67,18 +67,21 @@
             <!-- Mobile -->
             <div class="mobile">
                 <% if (theme.navbar.search.enable === true) { %>
-                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
+                    <button type="button" class="icon-item search search-popup-trigger"
+                            aria-label="打开站内搜索" aria-controls="local-search-overlay" aria-expanded="false">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    </button>
                 <% } %>
-                <div class="icon-item navbar-bar">
-                    <div class="navbar-bar-middle"></div>
-                </div>
+                <button type="button" class="icon-item navbar-bar"
+                        aria-label="打开导航菜单" aria-controls="mobile-navbar-drawer" aria-expanded="false">
+                    <span class="navbar-bar-middle" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </div>
 
     <!-- Mobile sheet -->
-    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+    <div id="mobile-navbar-drawer" class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between" aria-hidden="true">
         <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
             <% for (let i in theme.navbar.links) { %>
                 <% if (theme.navbar.links[i].path !== 'none') { %>
