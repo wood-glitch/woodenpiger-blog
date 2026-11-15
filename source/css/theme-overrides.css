@@ -1175,3 +1175,12 @@ html.light .social-toast {
     transition: none !important;
   }
 }
+
+
+/* ---------- 20. Tag cloud readability ---------- */
+/* Tag weight is already shown as a number; never blur tag names or counts. */
+.tagcloud-content .tag-list li a[data-weight],
+.tagcloud-content .tags-punctuation li a[data-weight] {
+  -webkit-filter: none !important;
+  filter: none !important;
+}
